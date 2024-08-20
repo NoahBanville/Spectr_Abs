@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 plt.figure(figsize=(8,6))
-# chemin d'accès à changer selon utilisateur
+# chemin d'accès au fichier contenant les CSV (à changer selon utilisateur)
 repertoire_csv = r"C:\Users\noah\Downloads\test"
 
 #boucle sur nombre CSV
@@ -19,9 +19,9 @@ for fichier in os.listdir(repertoire_csv):
         plt.plot(x, y, label=fichier.split('-')[0])
 
 # mise en forme
-plt.title("Spectre d'absorbance", fontsize=20)
+plt.title("Spectre d'absorption", fontsize=20)
 plt.xlabel("Longueur d'onde (nm)")
-plt.ylabel('Absorbance')
+plt.ylabel('Absorption')
 plt.legend()
 
 plt.show()
